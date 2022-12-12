@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Frequent Flyers</title>
+    <title id="title">Frequent Flyers</title>
 </head>
 <body>
-    <h1></h1>
         <section id="show-page">
             <div>National Competition Name: </div>
             <div><%= national.name %></div>
@@ -59,7 +58,7 @@
         <input type="submit" value="Add Flights">
         </form>
 
-        <br><br><h2>Go Hard, Now Go Home!🥇🏠</h2>
+        <br><h2>Go Hard, Now Go Home!🥇🏠</h2>
         <form id="add-flights" method="POST"
         action="/nationals/<%= national._id %>/flights">
         <label>Airline:</label>
@@ -96,6 +95,36 @@
             <input type="datetime-local" name="arrival" %>">
         <input type="submit" value="Add Flights">
         </form>
+        <br>
+        <br>
+
+        <h2>You can't STAY with us! 🏩</h2>
+
+        <body>
+          
+          <form action="/nationals/<%= national._id%>/hotels" method="POST">
+              <br>
+          <label>Accomodations:</label>
+              <select name="accomodations">
+                  <option value=""></option>
+                  <option value="Hotel">Hotel</option>
+                  <option value="AirBnb">Airbnb</option>
+                  <option value="Staying with family">Staying with family</option>
+              </select>
+              <br>
+          <label>Address:</label>
+              <input type="textbox" name="address">
+              <br>
+          <label>Confirmation Number:</label>
+              <input type="textbox" name="confirmationNumber" %>">
+              <br>
+          <label>Check In Date:</label>
+              <input type="datetime-local" name="checkInDate" %>">
+          <label>Check Out Date:</label>
+              <input type="datetime-local" name="checkOutDate" %>">
+              <input type="submit" value="Reserve Your Stay">
+         
+          </form>
 
         <% if (national.flights.length) { %>
             <table>
@@ -108,12 +137,9 @@
                 <th>Date:</th>
               </tr>
               </thead>
+
               <tbody>
-                <br>
-                <br>
-                <br>
-
-
+               
               <% national.flights.forEach(function(n) { %>
                 <tr>
                 <td><%= n.airline %></td>
@@ -131,49 +157,33 @@
     </main>
 </body>
 </html>
-<br>
-<br>
-
-<div><h2>You can't STAY with us! 🏩</div></h2>
-
-  <body>
-    
-    <form action="/nationals/<%= national._id%>/hotels" method="POST">
-        <br>
-        <label>Accomodations:</label>
-        <select name="accomodations">
-            <option value=""></option>
-            <option value="Hotel">Hotel</option>
-            <option value="AirBnb">Airbnb</option>
-            <option value="Staying with family">Staying with family</option>
-        </select>
-        <br>
-        <label>Address:</label>
-        <input type="textbox" name="address">
-        <br>
-        <label>Confirmation Number:</label>
-        <input type="textbox" name="confirmationNumber" %>">
-        <br>
-        <label>Check In Date:</label>
-        <input type="datetime-local" name="checkInDate" %>">
-        <label>Check Out Date:</label>
-        <input type="datetime-local" name="checkOutDate" %>">
-        <br>
-        <input type="submit" value="Reserve Your Stay">
-    </form>
+    <tbody>
     <% hotel.forEach(h => { %>
-            Accomodations: <%= h.accomodations %> 
+        <table>
+            <thead>
+                <tr>
+                <th>Accomodations:</th>
+                <th>Address:</th>
+                <th>Confirmation Number</th>
+                <th>Check In Date:</th>
+                <th>Check Out Date:</th>
+                </tr>
+                </thead>
+            <tbody>
+            <tr>
+            <td><%= h.accomodations %> </td>
             <br> 
-            Address: <%= h.address %> 
+            <td><%= h.address %> </td>
             <br> 
-            Confirmation Number: $<%= h.confirmationNumber %> 
+            <td> $<%= h.confirmationNumber %> </td>
             <br> 
-            Check In Date: <%= h.checkInDate %> 
+            <td> <%= h.checkInDate %> </td>
             <br> 
-            Check Out Date: <%= h.checkOutDate %>
-        </li>
+            <td> <%= h.checkOutDate %> </td>
+            </tr>
        <% }) %>
-    
+    </tbody>
+    </table>
     </body> 
 
 <%- include('../partials/footer') %>

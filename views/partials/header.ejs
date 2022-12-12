@@ -6,17 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='/stylesheets/style.css' />
-  <!-- <title>Frequent Flyers</title> -->
+  <title>Frequent Flyers</title>
 
 </head>
 
 <body>
   <nav>
-    <a href="/nationals">All National Competitions</a>
-    <!-- <a href="/nationals/new"> Add a New National Competition</a> -->
+  
     <% if (user) { %>
-      <!-- <a href="/hotels/new"	>
-      Add a Stay</a> -->
+        <a href="/nationals">All National Competitions</a>
       <a href="/nationals/new" >Add a New National Competition</a>
       <a href="/logout">Log Out</a>
     <% } else { %>
