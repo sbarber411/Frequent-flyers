@@ -1,0 +1,181 @@
+<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Frequent Flyers</title>
+</head>
+<body>
+    <h1></h1>
+        <section id="show-page">
+            <div>National Competition Name: </div>
+            <div><%= national.name %></div>
+            <div>Location: </div>
+            <div><%= national.location %></div>
+            <div>Start Date/Time: </div>
+            <div><%= national.startDate%></div>
+        </section>
+
+
+    <br><br><h2>Meet Me at the Mat! ✈️🤸🏽‍♂️ </h2>
+        <form id="add-flights" method="POST"
+        action="/nationals/<%= national._id %>/flights">
+
+        <label>Airline:</label>
+        <select name="airline">
+            <option value=""></option>
+            <option value="Delta">Delta</option>
+            <option value="United">United</option>
+            <option value="American">American</option>
+            <option value="United">United</option>
+            <option value="Spirit">Spirit</option>
+            <option value="Jetblue">Jetblue</option>
+            </select>
+            <br>
+        <label>Confirmation Number:</label>
+        <input type="textbox" name="confirmationNumber">
+        <br>
+        <label>Departure Airport:</label>
+        <select name="departureAirport">
+            <option value="EWR" selected>EWR</option>
+            <option value="LGA">LGA</option>
+            <option value="JFK">JFK</option>
+        </select>
+        <br>
+        <label>Arrival Airport:</label>
+        <select name="arrivalAirport">
+            <option value=""></option>
+            <option value="IND">IND</option>
+            <option value="ATL">ATL</option>
+            <option value="ORF">ORF</option>
+            <option value="MCO">MCO</option>
+        </select>
+        <br>
+        <label>Departure Date/Time:</label>
+            <input type="datetime-local" name="arrival" %>">
+        <input type="submit" value="Add Flights">
+        </form>
+
+        <br><br><h2>Go Hard, Now Go Home!🥇🏠</h2>
+        <form id="add-flights" method="POST"
+        action="/nationals/<%= national._id %>/flights">
+        <label>Airline:</label>
+        <select name="airline">
+            <option value=""></option>
+            <option value="Delta">Delta</option>
+            <option value="United">United</option>
+            <option value="American">American</option>
+            <option value="United">United</option>
+            <option value="Spirit">Spirit</option>
+            <option value="Jetblue">Jetblue</option>
+        </select>
+        <br>
+        <label>Confirmation Number:</label>
+        <input type="textbox" name="confirmationNumber">
+        <br>
+        <label>Departure Airport:</label>
+        <select name="departureAirport">
+            <option value=""></option>
+            <option value="IND">IND</option>
+            <option value="ATL">ATL</option>
+            <option value="ORF">ORF</option>
+            <option value="MCO">MCO</option>
+        </select>
+        <br>
+        <label>Arrival Airport:</label>
+        <select name="arrivalAirport">
+            <option value="EWR" selected>EWR</option>
+            <option value="LGA">LGA</option>
+            <option value="JFK">JFK</option>
+        </select>
+       <br>
+        <label>Departure Date/Time:</label>
+            <input type="datetime-local" name="arrival" %>">
+        <input type="submit" value="Add Flights">
+        </form>
+
+        <% if (national.flights.length) { %>
+            <table>
+              <thead>
+              <tr>
+                <th>Airline:</th>
+                <th>Confirmation Number:</th>
+                <th>Departure Airport:</th>
+                <th>Arrival Airport:</th>
+                <th>Date:</th>
+              </tr>
+              </thead>
+              <tbody>
+                <br>
+                <br>
+                <br>
+
+
+              <% national.flights.forEach(function(n) { %>
+                <tr>
+                <td><%= n.airline %></td>
+                <td><%= n.confirmationNumber %></td>
+                <td><%= n.departureAirport %></td>
+                <td><%= n.arrivalAirport %></td>
+                <td><%= n.arrival %> </td>
+                </tr>
+              <% }); %>
+              </tbody>
+            </table>
+            <% } else { %>
+            <h5>No Flight Options</h5>
+            <% } %>
+    </main>
+</body>
+</html>
+<br>
+<br>
+
+<div><h2>You can't STAY with us! 🏩</div></h2>
+
+  <body>
+    
+    <form action="/nationals/<%= national._id%>/hotels" method="POST">
+        <br>
+        <label>Accomodations:</label>
+        <select name="accomodations">
+            <option value=""></option>
+            <option value="Hotel">Hotel</option>
+            <option value="AirBnb">Airbnb</option>
+            <option value="Staying with family">Staying with family</option>
+        </select>
+        <br>
+        <label>Address:</label>
+        <input type="textbox" name="address">
+        <br>
+        <label>Confirmation Number:</label>
+        <input type="textbox" name="confirmationNumber" %>">
+        <br>
+        <label>Check In Date:</label>
+        <input type="datetime-local" name="checkInDate" %>">
+        <label>Check Out Date:</label>
+        <input type="datetime-local" name="checkOutDate" %>">
+        <br>
+        <input type="submit" value="Reserve Your Stay">
+    </form>
+    <% hotel.forEach(h => { %>
+            Accomodations: <%= h.accomodations %> 
+            <br> 
+            Address: <%= h.address %> 
+            <br> 
+            Confirmation Number: $<%= h.confirmationNumber %> 
+            <br> 
+            Check In Date: <%= h.checkInDate %> 
+            <br> 
+            Check Out Date: <%= h.checkOutDate %>
+        </li>
+       <% }) %>
+    
+    </body> 
+
+<%- include('../partials/footer') %>
+
+

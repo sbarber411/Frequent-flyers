@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Itinerary</title>
+</head>
+<body>
+
+
+
+ <form action="/nationals/<%= nationals._id %>?_method=PUT" method="POST">
+
+<label>National Competition Name:</label>
+        <select name="name">
+            <option value=""></option>
+            <option value="Jamfest Super Nationals">Jamfest Super Nationals</option>
+            <option value="Cheer Sport Nationals">Cheer Sport Nationals</option>
+            <option value="The Grand Nationals Championship">The Grand Nationals Championship</option>
+            <option value="All-Star Cheerleading Worlds">All-Star Cheerleading Worlds</option>
+     </select>
+</label><br>
+
+<label>Competition Location:</label>
+    <select name="location">
+        <option value=""></option>
+        <option value="Indianapolis, ID">Indianapolis, ID</option>
+        <option value="Atlanta, GA">Atlanta, GA</option>
+        <option value="Virginia Beach, VA">Virginia Beach, VA</option>
+        <option value="Orlando, FL">Orlando, FL</option>
+  </select>
+</label><br>
+
+  <label>Competition Start Date/Time:</label>
+    <input type="datetime-local" name="startDate">
+</label><br>
+
+
+        <button type="submit">Update Itinerary</button>
+      </form>
+</body>
+</html>

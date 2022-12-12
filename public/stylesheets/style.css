@@ -1,20 +1,14 @@
-.brand-logo {
-  margin-left: 15px;
+.login {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: 34px;
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
+.login img {
+  height: 30px;
 }
-
-#search-row form {
-  padding-top: 20px;
-}
-
-.student-name {
-  position: relative;
-  top: -5px;
-}
-
-.collection-item form {
-  margin-top: -5px;
+.navbar {
+  display: flex;
+  justify-content: center;
 }

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequent Flyers</title>
+</head>
+
+<body>
+    <h1 class="text-uppercase">You Can't STAY With Us!</h1>
+
+    <form action="/nationals/<%= national %>/hotels" method="POST">
+
+        <label>Accomodations:</label>
+        <input type="textbox" name="accomodations">
+        <label>Address:</label>
+        <input type="textbox" name="'address">
+        <label>Confirmation Number:</label>
+        <input type="number" name="confirmationNumber">
+        <label>Check In Date:</label>
+        <input type="datetime-local" name="checkInDate">
+        <label>Check Out Date:</label>
+        <input type="datetime-local" name="checkOutDate">
+        <input type="submit" value="Reserve Your Stay">
+    </form>
+</body>
+
+</html>
