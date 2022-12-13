@@ -1,4 +1,3 @@
-<%- include('../partials/header') %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,23 +6,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'>
   
     <title>Frequent Flyers</title>
 </head>
 
-<body class="log-in-page">
+<body class="login-page">
     <% if (user) { %>
-        <nav class="home-nav">
-            <h1 class="\"> %>!</h1>
-            <a class="" href="/nationals">All National Competitions</a>
+        <nav class="nav-homepage">
+            <a class="all-nationals" href="/nationals">All National Competitions</a>
             <a class="logout" href="/logout">Log Out</a>
-            
         </nav>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="lets-fly">Let's Fly, <%= user.name %>!</h1>
         <% } else { %>
-            <h1 class="\">Frequent Flyers</h1>
+            <h1 class="main-title">Frequent Flyers</h1>
             <a class="login" href="/auth/google">Log In</a>
             <% } %>
 </body>
 </html>
-<%- include('../partials/footer') %>

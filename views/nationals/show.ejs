@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <title id="title">Frequent Flyers</title>
 </head>
+
+
 <body>
         <section id="show-page">
             <div>National Competition Name: </div>
@@ -19,11 +21,13 @@
         </section>
 
 
-    <br><br><h2>Meet Me at the Mat! ✈️🤸🏽‍♂️ </h2>
+    <br>
+    <br>
+    <h2>Meet Me at the Mat! ✈️🤸🏽‍♂️ </h2>
         <form id="add-flights" method="POST"
         action="/nationals/<%= national._id %>/flights">
 
-        <label>Airline:</label>
+    <label>Airline:</label>
         <select name="airline">
             <option value=""></option>
             <option value="Delta">Delta</option>
@@ -34,7 +38,7 @@
             <option value="Jetblue">Jetblue</option>
             </select>
             <br>
-        <label>Confirmation Number:</label>
+    <label>Confirmation Number:</label>
         <input type="textbox" name="confirmationNumber">
         <br>
         <label>Departure Airport:</label>
@@ -44,7 +48,7 @@
             <option value="JFK">JFK</option>
         </select>
         <br>
-        <label>Arrival Airport:</label>
+    <label>Arrival Airport:</label>
         <select name="arrivalAirport">
             <option value=""></option>
             <option value="IND">IND</option>
@@ -53,15 +57,16 @@
             <option value="MCO">MCO</option>
         </select>
         <br>
-        <label>Departure Date/Time:</label>
-            <input type="datetime-local" name="arrival" %>">
+    <label>Departure Date/Time:</label>
+        <input type="datetime-local" name="arrival" %>">
         <input type="submit" value="Add Flights">
         </form>
 
-        <br><h2>Go Hard, Now Go Home!🥇🏠</h2>
+        <br>
+    <h2>Go Hard, Now Go Home!🥇🏠</h2>
         <form id="add-flights" method="POST"
         action="/nationals/<%= national._id %>/flights">
-        <label>Airline:</label>
+    <label>Airline:</label>
         <select name="airline">
             <option value=""></option>
             <option value="Delta">Delta</option>
@@ -72,10 +77,10 @@
             <option value="Jetblue">Jetblue</option>
         </select>
         <br>
-        <label>Confirmation Number:</label>
+    <label>Confirmation Number:</label>
         <input type="textbox" name="confirmationNumber">
         <br>
-        <label>Departure Airport:</label>
+    <label>Departure Airport:</label>
         <select name="departureAirport">
             <option value=""></option>
             <option value="IND">IND</option>
@@ -84,61 +89,57 @@
             <option value="MCO">MCO</option>
         </select>
         <br>
-        <label>Arrival Airport:</label>
+    <label>Arrival Airport:</label>
         <select name="arrivalAirport">
             <option value="EWR" selected>EWR</option>
             <option value="LGA">LGA</option>
             <option value="JFK">JFK</option>
         </select>
        <br>
-        <label>Departure Date/Time:</label>
-            <input type="datetime-local" name="arrival" %>">
+    <label>Departure Date/Time:</label>
+        <input type="datetime-local" name="arrival" %>">
         <input type="submit" value="Add Flights">
         </form>
         <br>
         <br>
+    
+    <body>
+    <h2>You can't STAY with us! 🏩</h2>
+        <form action="/nationals/<%= national._id%>/hotels" method="POST">
+        <br>
+    <label>Accomodations:</label>
+        <select name="accomodations">
+            <option value=""></option>
+            <option value="Hotel">Hotel</option>
+            <option value="AirBnb">Airbnb</option>
+            <option value="Staying with family">Staying with family</option>
+        </select>
+        <br>
+    <label>Address:</label>
+        <input type="textbox" name="address">
+        <br>
+    <label>Confirmation Number:</label>
+        <input type="textbox" name="confirmationNumber" %>">
+        <br>
+    <label>Check In Date:</label>
+        <input type="datetime-local" name="checkInDate" %>">
+    <label>Check Out Date:</label>
+        <input type="datetime-local" name="checkOutDate" %>">
+        <input type="submit" value="Reserve Your Stay">
+    </form>
 
-        <h2>You can't STAY with us! 🏩</h2>
-
-        <body>
-          
-          <form action="/nationals/<%= national._id%>/hotels" method="POST">
-              <br>
-          <label>Accomodations:</label>
-              <select name="accomodations">
-                  <option value=""></option>
-                  <option value="Hotel">Hotel</option>
-                  <option value="AirBnb">Airbnb</option>
-                  <option value="Staying with family">Staying with family</option>
-              </select>
-              <br>
-          <label>Address:</label>
-              <input type="textbox" name="address">
-              <br>
-          <label>Confirmation Number:</label>
-              <input type="textbox" name="confirmationNumber" %>">
-              <br>
-          <label>Check In Date:</label>
-              <input type="datetime-local" name="checkInDate" %>">
-          <label>Check Out Date:</label>
-              <input type="datetime-local" name="checkOutDate" %>">
-              <input type="submit" value="Reserve Your Stay">
-         
-          </form>
-
-        <% if (national.flights.length) { %>
-            <table>
-              <thead>
-              <tr>
-                <th>Airline:</th>
-                <th>Confirmation Number:</th>
-                <th>Departure Airport:</th>
-                <th>Arrival Airport:</th>
-                <th>Date:</th>
-              </tr>
-              </thead>
-
-              <tbody>
+    <% if (national.flights.length) { %>
+    <table>
+    <thead>
+    <tr>
+        <th>Airline:</th>
+        <th>Confirmation Number:</th>
+        <th>Departure Airport:</th>
+        <th>Arrival Airport:</th>
+        <th>Date:</th>
+    </tr>
+    </thead>
+    <tbody>
                
               <% national.flights.forEach(function(n) { %>
                 <tr>
@@ -175,7 +176,7 @@
             <br> 
             <td><%= h.address %> </td>
             <br> 
-            <td> $<%= h.confirmationNumber %> </td>
+            <td> <%= h.confirmationNumber %> </td>
             <br> 
             <td> <%= h.checkInDate %> </td>
             <br> 

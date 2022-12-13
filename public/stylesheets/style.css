@@ -1,175 +1,199 @@
 .login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+  }
+  
+  .login img {
+    height: 30px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    color: transparent;
+  }
+  
+  .brand-logo {
+    margin-left: 15px;
+  }
+  * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+  }
+  
+  body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+      "nav"
+      "main"
+  }
+  
+  body > nav {
+    grid-area: nav;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px 0 30px;
+    text-align: right;
+  }
+  
+  nav > img {
+    width: 34px;
+    object-fit: contain;
+    margin-right: auto;
+   
+  }
+  
+  body {
+    grid-area: main;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: left;
+    background-color: white;
+    padding: 20px;
+    background-image: url("../images/Screen\ Shot\ 2022-12-13\ at\ 10.52.37\ AM.png");
+    background-position-y: 50%;
+    background-size: cover;
+  }
+  
+  nav > a {
+    margin: 20px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  nav > a:hover {
+    color: black;
+    background-color: white;
+  }
+  
+  nav > a.active {
+    color: white;
+  }
+  
+  #new-form {
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: repeat(2, minmax(auto, 22rem));
+  }
+  
+  table {
+    font-size: 20px;
+  }
+  
+  table thead th {
+    padding: 5px;
+    border-bottom: 4px solid rgb(43, 169, 220);
+    border-top: 4px solid rgb(43, 169, 220);
+  }
+  
+  table td {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  
+  #list a {
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: bold;
+  
+  }
+  
+  #list a:hover {
+    background-color:white;
+  }
+  
+  #list{
+    text-align: center;
+    font-size: 14pt;
+  }
+  
+  #show-page {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+    border-bottom: 4px solid rgb(43, 169, 220);
+    border-top: 4px solid rgb(43, 169, 220);
+    font-weight: bold;
+    color:black;
+ 
+  }
+  
+h1, body {
+    text-align: center;
 }
 
-.login img {
-  height: 30px;
-}
-.navbar {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.brand-logo {
-  margin-left: 15px;
-}
-* {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-}
-
-body {
-  margin: 0;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas:
-    "nav"
-    "main"
-}
-
-body > nav {
-  grid-area: nav;
-  background-color: rgb(43, 169, 220);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 20px 0 30px;
-}
-
-nav > img {
-  width: 34px;
-  object-fit: contain;
-  margin-right: auto;
-}
-
-body {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  background-color: white;
-  padding: 20px;
-}
-
-nav > a {
-  margin: 20px;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-nav > a:hover {
-  color: black;
-  background-color: white;
-}
-
-nav > a.active {
+.main-title {
   color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0%
 }
-
-#new-form {
-  display: grid;
-  grid-gap: 60px;
-  grid-template-columns: repeat(2, minmax(auto, 22rem));
+.login-page {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 60px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/iStock-1165781004.jpg");
+  background-position-y: 50%;
 }
-
-#new-form *,  #add-review-form * {
-  font-size: 20px;
-  padding: 5px;
-  border-radius: 15px;
-}
-
-#new-form input[type="submit"] {
-  grid-column: span 2;
-  width: 10rem;
-  margin-left: auto;
-}
-
-table {
-  font-size: 20px;
-}
-
-table thead th {
-  padding: 5px;
-  border-bottom: 4px solid rgb(43, 169, 220);
-  border-top: 4px solid rgb(43, 169, 220);
-}
-
-table td {
-  padding: 8px;
-  text-align: center;
-}
-
-#list td:nth-child(2), #list td:nth-child(3){
-  min-width: 100px;
-}
-
-
-#list a {
-  border-radius: 4px;
-  background-color: white;
-  padding: 4px;
+a {
   text-decoration: none;
-  font-size: 16px;
-  font-style: bold;
-
+}
+.lets-fly {
+  color: white;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  margin-top: 0%;
 }
 
-#list a:hover {
-  background-color:rgb(43, 169, 220);
+.login {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.logout {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: right;
+  align-items: right;
 }
-
-#list{
-  text-align: center;
-  font-size: 14pt;
-}
-
-#show-page {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-  border-bottom: 4px solid rgb(43, 169, 220);
-  border-top: 4px solid rgb(43, 169, 220);
-  font-weight: bold;
-  color:black;
-}
-
-#show-page div:nth-child(even) {
-  font-weight: bold;
-}
-
- #add-review-form {
-   display: grid;
-   grid-template-columns: auto auto;
-   grid-gap: 5rem;
- }
-
- #add-review-form input[type="submit"] {
-   width: 8rem;
-   grid-column: 2 / 3;
-   margin-bottom: 2rem;
- }
-
- ul {
-  margin: 0 0 1rem;
-  padding: 0;
-  list-style: none;
-}
-	
-li {
-  font-weight: bold;
-}
-
-div {
-  text-align: center;
-}
-
-h1{
-  text-align: center;
+.all-nationals {
+  color:white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: right;
+  align-items: right;
 }

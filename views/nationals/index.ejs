@@ -9,10 +9,10 @@
   <title>Frequent Flyers</title>
 </head>
 <body>
-  <h1>Frequent Flyers</h1>
-  
+  <div class="nationals">
 <table id="list">
   <thead>
+    <% if (user) { %>
     <tr>
       <th>National Competition Name:</th>
       <th>National Competition Location:</th>
@@ -21,6 +21,7 @@
       <th></th>
       <th></th>
     </tr>
+    <% } %>
   </thead>
   <tbody>
     <% if (user) { %>
@@ -38,7 +39,9 @@
             </tr>
             <% }); %>
     <% } %>
+</div>
     </tbody>
   </table>
+  </body>
   
 <%- include('../partials/footer') %>
