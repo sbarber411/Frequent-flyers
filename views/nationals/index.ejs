@@ -12,6 +12,7 @@
   <div class="nationals">
 <table id="list">
   <thead>
+  
     <% if (user) { %>
     <tr>
       <th>National Competition Name:</th>
@@ -22,8 +23,10 @@
       <th></th>
     </tr>
     <% } %>
+    </span>
   </thead>
   <tbody>
+
     <% if (user) { %>
         <% nationals.forEach(function(n) { %>
             <tr>
@@ -39,6 +42,7 @@
             </tr>
             <% }); %>
     <% } %>
+
 </div>
     </tbody>
   </table>

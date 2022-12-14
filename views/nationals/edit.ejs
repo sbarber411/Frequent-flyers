@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css'>
     <title>Edit Itinerary</title>
 </head>
-<body>
 
 
-
+<div class="background-image">
  <form action="/nationals/<%= nationals._id %>?_method=PUT" method="POST">
-
+<h1> Edit Itinerary</h1>
 <label>National Competition Name:</label>
         <select name="name">
             <option value=""></option>
@@ -23,21 +23,20 @@
 </label><br>
 
 <label>Competition Location:</label>
-    <select name="location">
-        <option value=""></option>
-        <option value="Indianapolis, ID">Indianapolis, ID</option>
-        <option value="Atlanta, GA">Atlanta, GA</option>
-        <option value="Virginia Beach, VA">Virginia Beach, VA</option>
-        <option value="Orlando, FL">Orlando, FL</option>
+        <select name="location">
+            <option value=""></option>
+            <option value="Indianapolis, ID">Indianapolis, ID</option>
+            <option value="Atlanta, GA">Atlanta, GA</option>
+            <option value="Virginia Beach, VA">Virginia Beach, VA</option>
+            <option value="Orlando, FL">Orlando, FL</option>
   </select>
 </label><br>
 
-  <label>Competition Start Date/Time:</label>
-    <input type="datetime-local" name="startDate">
+<label>Competition Start Date/Time:</label>
+        <input type="datetime-local" name="startDate">
 </label><br>
-
-
         <button type="submit">Update Itinerary</button>
-      </form>
-</body>
+</form>
+</div>
+
 </html>

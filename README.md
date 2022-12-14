@@ -1,35 +1,61 @@
-# passport-boilerplate
+# Sophia Barber - Frequent Flyers
 
+## Project Name: Frequent Flyers (A Cheer Mom's Itinerary Dream)
+- - -
+Game-Link: 
 
-This is your passport boilerplate.
+- - -
+## Frequent Flyers Overview:
+- - -
+Frequent Flyers is an application developed by a cheer team mom. While traveling across the country during national cheer season, most cheer parents need one concise location to store all of their travel itinerary information to make travel easier. Frequent Flyers allows its' users to select the National Cheer Competition they are attending. Once the National Cheer Competition is selected, users may select the "view itinerary" link to add their outbound and inbound flights as well as their accomodations information. If you make a mistake and need to edit the National Cheer Competition users are able to do so. Users may also delete the National Cheer Competition and all of its' attached itinerary information once it has ended as well. 
 
-## Setup 
+## How To Use/Wireframe (Images Attached):
+- - -
+1. Landing Page:
+   ![landingPage](public/images/landingpage.png)
+   When a user reaches the applications landing page, homepage, they will have the option to log in. The user will not be able to use the application until they are signed in.
 
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+2. Let's Fly:
+   ![letsFly](public/images/letsfly.png)
+   After a user logs into the application, they will see a message titled "Let's Fly" along with their name associated with their google account due to oauth configurations. If the user chooses the "log out" option, it will send the user back to the landing page. 
 
+3. All Nationals:
+ ![nationalPage](public/images/nationalpage.png)
+   Once the user chooses "All Nationals" it will send the user to the All Nationals page where they will be able to "Add a New National Competition". The user will be able to select the "view itinerary", "edit itinerary", "delete itinerary", "all national competitions" and "log out" options from this page. 
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin main` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin main`
+4. Add a New National Competition:
+   ![addNew](public/images/addnew.png)
+    Users will be able to a new National Competition from this page and include the National Competition name, location, date and time. 
 
-#### Setup your login (THE APP WON'T WORK until you do, no VIEWS are setup, or the landing route)
+5. Itinerary Page:
+   ![itineraryPage](public/images/itinerarypage.png)
+   Users will be able to view the National Competition they are attending above and input their outbound, inbound and accommodations on this page. Once the users flight and hotel accommodations are inputted, it will store at the bottom of this page for an easy reference. 
 
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
+6. Edit Itinerary:
+   ![editItinerary](public/images/edititinerary.png)
+   Users will be able to edit their National Competition location on this page. 
 
-#### Make a commit 
+7. Delete Itinerary:
+ ![deleteItinerary](public/images/deleteitinerary.png)
+   Users will be able to view all National Competitions on this page and select the "x" button next to each National Competition to delete it. 
 
-```git commit -m "setup up oauth and User Model"```
+## Trello:
+- - -
+![trelloBoard](public/images/trelloboard.png)
+https://trello.com/b/FXS97aoR/frequent-flyers
+
+## ERD:
+- - -
+![erdPic](public/images/ERD.png)
+
+##  Technologies Used:
+- - -
+Javascript, HTML, CSS, MongoDB, EJS, Google oauth, 
+
+##  Next Steps for the Future:
+- - -
+1. Add different itineraries for multiple athletes.
+2. Add background music. 
+3. Add a background photo that symbolizes the destination. 
+4. Add other travel itinerary necessities such as a car rental option.
+5. Add to-do list for packing athletes cheer uniforms, 

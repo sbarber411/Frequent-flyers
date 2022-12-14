@@ -6,7 +6,6 @@ module.exports = {
     create,
 }
 
-
 function create(req, res) {
 	console.log(req.params.id, 'params id')
 	req.body.national = req.params.id
@@ -24,7 +23,6 @@ function create(req, res) {
 		console.log(hotelDocument);
 		console.log("===================");
 
-        // req.body.airport= req.body.airport
 		res.redirect(`/nationals/${req.params.id}`)
 	});
 

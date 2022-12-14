@@ -42,7 +42,7 @@ function create(req, res) {
 
 function newNational(req, res) {
     res.render("nationals/new");
-  }
+}
 
 function edit(req, res) {
     // Note the cool "dot" syntax to query on the property of a subdoc
@@ -50,7 +50,7 @@ function edit(req, res) {
     National.findOne({_id: req.params.id, user: req.user._id}, function(err, nationalDocument) {
         if (err || !nationalDocument) return res.redirect('/nationals');
       // Render the comments/edit.ejs template, passing to it the comment
-      res.render('nationals/edit', {nationals: nationalDocument}); 
+        res.render('nationals/edit', {nationals: nationalDocument}); 
     });
   }
   

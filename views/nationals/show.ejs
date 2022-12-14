@@ -11,16 +11,14 @@
 
 
 <body>
-        <section id="show-page">
-            <div>National Competition Name: </div>
+    <section id="show-page">
+        <div>National Competition Name: </div>
             <div><%= national.name %></div>
-            <div>Location: </div>
+        <div>Location: </div>
             <div><%= national.location %></div>
-            <div>Start Date/Time: </div>
+        <div>Start Date/Time: </div>
             <div><%= national.startDate%></div>
-        </section>
-
-
+    </section>
     <br>
     <br>
     <h2>Meet Me at the Mat! ✈️🤸🏽‍♂️ </h2>
@@ -141,20 +139,20 @@
     </thead>
     <tbody>
                
-              <% national.flights.forEach(function(n) { %>
-                <tr>
-                <td><%= n.airline %></td>
-                <td><%= n.confirmationNumber %></td>
-                <td><%= n.departureAirport %></td>
-                <td><%= n.arrivalAirport %></td>
-                <td><%= n.arrival %> </td>
-                </tr>
-              <% }); %>
-              </tbody>
-            </table>
-            <% } else { %>
-            <h5>No Flight Options</h5>
-            <% } %>
+     <% national.flights.forEach(function(n) { %>
+    <tr>
+        <td><%= n.airline %></td>
+            <td><%= n.confirmationNumber %></td>
+            <td><%= n.departureAirport %></td>
+            <td><%= n.arrivalAirport %></td>
+            <td><%= n.arrival %> </td>
+    </tr>
+    <% }); %>
+    </tbody>
+    </table>
+    <% } else { %>
+        <h5>No Flight Options</h5>
+     <% } %>
     </main>
 </body>
 </html>
