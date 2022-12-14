@@ -2,7 +2,7 @@
 
 ## Project Name: Frequent Flyers (A Cheer Mom's Itinerary Dream)
 - - -
-Game-Link: 
+Game-Link: https://github.com/sbarber411/Frequent-flyers.git
 
 - - -
 ## Frequent Flyers Overview:
